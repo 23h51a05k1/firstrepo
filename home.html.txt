@@ -1,2 +1,132 @@
 This is the home file 
 Hey man my name is apsaym 
+DELL@Sidduuu MINGW64 ~ (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+DELL@Sidduuu MINGW64 ~ (master)
+$ cd downloads
+
+DELL@Sidduuu MINGW64 ~/downloads (master)
+$ cd github
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git log
+commit 8f05f3882c1dac6f830f99ca55baf27abc193139 (HEAD -> main)
+Author: <U+0096>23h51a05k1 <sidduuu17@gmail.com>
+Date:   Sun Nov 2 16:16:25 2025 +0530
+
+    second changes
+
+commit 24c4460579611122c21f25dbbb06296c7e4218ce
+Author: <U+0096>23h51a05k1 <sidduuu17@gmail.com>
+Date:   Sun Nov 2 16:14:46 2025 +0530
+
+    these are the first changes
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git remote add origin https://github.com/23h51a05k1/firstrepo.git
+error: remote origin already exists.
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/23h51a05k1/firstrepo.git'
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git push origin main
+info: please complete authentication in your browser...
+remote: Permission to 23h51a05k1/firstrepo.git denied to sidduthipparapu.
+fatal: unable to access 'https://github.com/23h51a05k1/firstrepo.git/': The requ
+ested URL returned error: 403
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ ^C
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git push origin main
+To https://github.com/23h51a05k1/firstrepo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/23h51a05k1/firstrepo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git push origin main
+To https://github.com/23h51a05k1/firstrepo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/23h51a05k1/firstrepo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git push --help
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ ^C
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git pull origin main --rebase
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 859 bytes | 78.00 KiB/s, done.
+From https://github.com/23h51a05k1/firstrepo
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 623 bytes | 311.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/23h51a05k1/firstrepo.git
+   4d73faf..ac366f0  main -> main
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git add .
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git commit -m "these is the latest change "
+[main d071125] these is the latest change
+ 1 file changed, 1 insertion(+)
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 367 bytes | 367.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/23h51a05k1/firstrepo.git
+   ac366f0..d071125  main -> main
+
+DELL@Sidduuu MINGW64 ~/downloads/github (main)
+$
